@@ -6,9 +6,10 @@ public class EnemyHealth : MonoBehaviour
     public float enemyMaxHealth;
     public GameObject enemyDeathFX;
     public Slider enemyHealthSlider;
+    public bool isEnemyCanDrop;
+    public GameObject theDrop;
 
     float enemyCurrentHealth;
-    
     
     // Start is called before the first frame update
     void Start()
@@ -16,12 +17,6 @@ public class EnemyHealth : MonoBehaviour
         enemyCurrentHealth = enemyMaxHealth;
         enemyHealthSlider.maxValue = enemyCurrentHealth;
         enemyHealthSlider.value = enemyCurrentHealth;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void EnemyGetDamage(float bulletdamage)
@@ -37,7 +32,12 @@ public class EnemyHealth : MonoBehaviour
 
     void MakeEnemyDead()
     {
-        Destroy(gameObject);
+        Destroy(gameObject.transform.parent.gameObject);
+        GameObject.Find("AudioBox").GetComponent<AudioBox>().AudioPlay(GameObject.Find("AudioBox").GetComponent<AudioBox>().enemyDead);
         Instantiate(enemyDeathFX, transform.position, transform.rotation);
+        if(isEnemyCanDrop)
+        {
+            Instantiate(theDrop, transform.position, transform.rotation);
+        }
     }
 }

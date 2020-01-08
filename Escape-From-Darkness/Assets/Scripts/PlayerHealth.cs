@@ -5,12 +5,10 @@ public class PlayerHealth : MonoBehaviour
 {
     public float playerMaxHealth;
     public GameObject playerDeathFX;
-    public AudioClip playerAudioHurt;
-
+    public GameObject gameOverPanel;
 
     float playerCurrentHealth;
     PlayerController controlMovement;
-    AudioSource playerAudioSource;
 
     //HUD
     public Slider playerHealthSlider;
@@ -30,8 +28,6 @@ public class PlayerHealth : MonoBehaviour
         playerHealthSlider.value = playerCurrentHealth;
 
         isPlayerTakeDamage = false;
-
-        playerAudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -55,8 +51,7 @@ public class PlayerHealth : MonoBehaviour
             return;
         }
         playerCurrentHealth -= damage;
-        
-        playerAudioSource.PlayOneShot(playerAudioHurt);
+        GameObject.Find("AudioBox").GetComponent<AudioBox>().AudioPlay(GameObject.Find("AudioBox").GetComponent<AudioBox>().playerHurt);
         playerHealthSlider.value = playerCurrentHealth;
         isPlayerTakeDamage = true;
 
@@ -65,9 +60,23 @@ public class PlayerHealth : MonoBehaviour
             MakePlayerDead();
         }
     }
+
+    public void PlayerGetHealth(float playerHealthAmount)
+    {
+        playerCurrentHealth += playerHealthAmount;
+        if (playerCurrentHealth > playerMaxHealth)
+        {
+            playerCurrentHealth = playerMaxHealth;
+        }
+        playerHealthSlider.value = playerCurrentHealth;
+    }
+
     public void MakePlayerDead()
     {
         Instantiate(playerDeathFX, transform.position, transform.rotation);
         Destroy(gameObject);
+        GameObject.Find("AudioBox").GetComponent<AudioBox>().AudioPlay(GameObject.Find("AudioBox").GetComponent<AudioBox>().playerDead);
+        //damageScreen.color = damagedColor;
+        gameOverPanel.SetActive(true);
     }
 }

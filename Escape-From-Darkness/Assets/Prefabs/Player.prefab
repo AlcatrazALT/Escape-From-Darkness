@@ -194,7 +194,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 3613620965812499002}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 47cf9e22198f0ca4dbfc660e4c59675d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7a169cfd135a64fa3c53970315c50a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMaxHealth: 20
+  playerMaxHealth: 50
   playerDeathFX: {fileID: 302056425701160674, guid: 843bd3e2f2f097741975ea334c406644,
     type: 3}
   playerHealthSlider: {fileID: 0}
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMaxSpeed: 7
-  playerJumpHeight: 150
+  playerJumpHeight: 200
   groundCheck: {fileID: 3613620964497045919}
   whatIsGround:
     serializedVersion: 2

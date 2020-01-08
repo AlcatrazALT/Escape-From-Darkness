@@ -71,6 +71,7 @@ public class PlayerController : MonoBehaviour
     void PlayerJump() // прыжок
     {
         isGround = false;
+        GameObject.Find("AudioBox").GetComponent<AudioBox>().AudioPlay(GameObject.Find("AudioBox").GetComponent<AudioBox>().playerJump);
         playerAnimator.SetBool("IsGrounded", isGround);
         playerRb2D.AddForce(new Vector2(0, playerJumpHeight));
     }

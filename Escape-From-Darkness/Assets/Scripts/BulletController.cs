@@ -11,16 +11,13 @@ public class BulletController : MonoBehaviour
         if (transform.localRotation.z > 0)
         {
             bulletRB2D.AddForce(new Vector2(-1, 0) * bulletSpeed, ForceMode2D.Impulse);
+            GameObject.Find("AudioBox").GetComponent<AudioBox>().AudioPlay(GameObject.Find("AudioBox").GetComponent<AudioBox>().playerShoot);
         }
         else
         {
             bulletRB2D.AddForce(new Vector2(1, 0) * bulletSpeed, ForceMode2D.Impulse);
+            GameObject.Find("AudioBox").GetComponent<AudioBox>().AudioPlay(GameObject.Find("AudioBox").GetComponent<AudioBox>().playerShoot);
         }
-    }
-
-    void Update()
-    {
-
     }
 
     public void RemoveForce()

@@ -12,12 +12,6 @@ public class BulletHit : MonoBehaviour
         bulletBC = GetComponentInParent<BulletController>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnTriggerEnter2D(Collider2D otherCollider)
     {
         if(otherCollider.gameObject.layer == LayerMask.NameToLayer("Shootable"))
@@ -29,9 +23,11 @@ public class BulletHit : MonoBehaviour
             {
                 EnemyHealth enemyHurt = otherCollider.gameObject.GetComponent<EnemyHealth>();
                 enemyHurt.EnemyGetDamage(bulletDamage);
+
             }
         }
     }
+
     void OnTriggerStay2D(Collider2D otherCollider)
     {
         if (otherCollider.gameObject.layer == LayerMask.NameToLayer("Shootable"))

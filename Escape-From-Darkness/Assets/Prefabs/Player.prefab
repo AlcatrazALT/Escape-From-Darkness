@@ -245,6 +245,7 @@ MonoBehaviour:
   playerMaxHealth: 50
   playerDeathFX: {fileID: 302056425701160674, guid: 843bd3e2f2f097741975ea334c406644,
     type: 3}
+  gameOverPanel: {fileID: 0}
   playerHealthSlider: {fileID: 0}
   damageScreen: {fileID: 0}
 --- !u!114 &3613620965812499008
@@ -259,7 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0d7fe7473b42e446bcdc4e547fd87ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMaxSpeed: 7
+  playerMaxSpeed: 10
   playerJumpHeight: 200
   groundCheck: {fileID: 3613620964497045919}
   whatIsGround:

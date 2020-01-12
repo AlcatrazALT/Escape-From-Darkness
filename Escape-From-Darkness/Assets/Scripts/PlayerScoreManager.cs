@@ -32,5 +32,4 @@ public class PlayerScoreManager : MonoBehaviour
     {
         playerScore = 0;
     }
-
 }

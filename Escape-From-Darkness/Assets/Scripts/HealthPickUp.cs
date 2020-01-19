@@ -10,7 +10,7 @@ public class HealthPickUp : MonoBehaviour
         {
             PlayerHealth playerHealth = otherCollider.gameObject.GetComponent<PlayerHealth>();
             playerHealth.PlayerGetHealth(playerHealthAmount);
-            GameObject.Find("AudioBox").GetComponent<AudioBox>().AudioPlay(GameObject.Find("AudioBox").GetComponent<AudioBox>().healthPickUp);
+
             Destroy(gameObject);
         }
     }

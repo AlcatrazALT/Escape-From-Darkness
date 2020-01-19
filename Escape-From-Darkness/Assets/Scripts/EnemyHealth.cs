@@ -11,7 +11,6 @@ public class EnemyHealth : MonoBehaviour
 
     float enemyCurrentHealth;
     
-    // Start is called before the first frame update
     void Start()
     {
         enemyCurrentHealth = enemyMaxHealth;
@@ -33,7 +32,7 @@ public class EnemyHealth : MonoBehaviour
     void MakeEnemyDead()
     {
         Destroy(gameObject.transform.parent.gameObject);
-        GameObject.Find("AudioBox").GetComponent<AudioBox>().AudioPlay(GameObject.Find("AudioBox").GetComponent<AudioBox>().enemyDead);
+        FindObjectOfType<AudioManager>().PlayMusic("DeathSound");
         Instantiate(enemyDeathFX, transform.position, transform.rotation);
         if(isEnemyCanDrop)
         {

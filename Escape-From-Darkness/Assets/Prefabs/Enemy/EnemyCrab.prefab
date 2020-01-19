@@ -334,7 +334,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3507185325589649044}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.48, y: -0.36, z: 15.4375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -387,7 +387,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 9, y: 2}
+  m_Size: {x: 6, y: 2}
   m_EdgeRadius: 0
 --- !u!114 &3507185325589649047
 MonoBehaviour:
@@ -403,7 +403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxSpeed: 6
   enemyGraphic: {fileID: 3507185325776763145}
-  enemyChargeTime: 0.5
+  enemyChargeTime: 0.15
 --- !u!1 &3507185325776763145
 GameObject:
   m_ObjectHideFlags: 0

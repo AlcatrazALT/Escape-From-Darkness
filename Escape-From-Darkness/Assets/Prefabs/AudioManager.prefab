@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7815710563387574430
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7815710563387574429}
+  - component: {fileID: 7815710563387574431}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Audio
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7815710563387574429
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7815710563387574430}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.468807, y: -0.7292414, z: -10.62062}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7815710563387574431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7815710563387574430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32b6e78446479c74dbd4482fcd8995b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundArr:
+  - nameSound: PlayerJump
+    clip: {fileID: 8300000, guid: f753e2f8ac0a37541a1bdcfe34a5dd13, type: 3}
+    audioSource: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+  - nameSound: DeathSound
+    clip: {fileID: 8300000, guid: 98ea146165daf2044861fad84eaff8bc, type: 3}
+    audioSource: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+  - nameSound: PlayerShoot
+    clip: {fileID: 8300000, guid: 2ab59660fc20acb4fa67c65528db45dd, type: 3}
+    audioSource: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+  - nameSound: PlayerGetScore
+    clip: {fileID: 8300000, guid: 79fd6c89e3d85cd42b91d635384242ac, type: 3}
+    audioSource: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - nameSound: ExplosionEffect
+    clip: {fileID: 8300000, guid: 4c4af875469b1474aa0fd27763ad5a61, type: 3}
+    audioSource: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - nameSound: PlayerHurt
+    clip: {fileID: 8300000, guid: 3eb1981e038743e46b2d1a0e9c9e0d3a, type: 3}
+    audioSource: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - nameSound: PlayerPowerUp
+    clip: {fileID: 8300000, guid: 1d80cb52f8ef9594fb122e7da2449156, type: 3}
+    audioSource: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - nameSound: ClikMenu
+    clip: {fileID: 8300000, guid: c44dcc51794021c449c91f698bfc7785, type: 3}
+    audioSource: {fileID: 0}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+  - nameSound: Teleport
+    clip: {fileID: 8300000, guid: 1f182fbd4af38aa409f7be9363162580, type: 3}
+    audioSource: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - nameSound: GameBackGroundMusic
+    clip: {fileID: 8300000, guid: ea9f72a981c771244ab2d97e990a160b, type: 3}
+    audioSource: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 1

@@ -7,30 +7,23 @@ public class PlayerHealth : MonoBehaviour
     public GameObject playerDeathFX;
     public GameObject gameOverPanel;
 
-    float playerCurrentHealth;
-    PlayerController controlMovement;
-
-    //HUD
     public Slider playerHealthSlider;
     public Image damageScreen;
 
+    float playerCurrentHealth;
     bool isPlayerTakeDamage = false;
     Color damagedColor = new Color(0f, 0f, 0f, 0.5f);
     float smoothColor = 5f;
 
-    // Start is called before the first frame update
     void Start()
     {
         playerCurrentHealth = playerMaxHealth;
-        controlMovement = GetComponent<PlayerController>();
-
+        PlayerController controlMovement = GetComponent<PlayerController>();
         playerHealthSlider.maxValue = playerCurrentHealth;
         playerHealthSlider.value = playerCurrentHealth;
-
         isPlayerTakeDamage = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (isPlayerTakeDamage)
@@ -51,8 +44,9 @@ public class PlayerHealth : MonoBehaviour
             return;
         }
         playerCurrentHealth -= damage;
-        GameObject.Find("AudioBox").GetComponent<AudioBox>().AudioPlay(GameObject.Find("AudioBox").GetComponent<AudioBox>().playerHurt);
         playerHealthSlider.value = playerCurrentHealth;
+        FindObjectOfType<AudioManager>().PlayMusic("PlayerHurt");
+
         isPlayerTakeDamage = true;
 
         if (playerCurrentHealth <= 0)
@@ -69,14 +63,13 @@ public class PlayerHealth : MonoBehaviour
             playerCurrentHealth = playerMaxHealth;
         }
         playerHealthSlider.value = playerCurrentHealth;
+        FindObjectOfType<AudioManager>().PlayMusic("PlayerPowerUp");
     }
 
     public void MakePlayerDead()
     {
         Instantiate(playerDeathFX, transform.position, transform.rotation);
-        Destroy(gameObject);
-        GameObject.Find("AudioBox").GetComponent<AudioBox>().AudioPlay(GameObject.Find("AudioBox").GetComponent<AudioBox>().playerDead);
-        //damageScreen.color = damagedColor;
-        gameOverPanel.SetActive(true);
+        FindObjectOfType<AudioManager>().PlayMusic("DeathSound");
+        Destroy(gameObject);   
     }
 }

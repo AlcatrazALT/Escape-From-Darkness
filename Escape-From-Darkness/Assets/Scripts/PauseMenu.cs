@@ -5,8 +5,12 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool isGamePaused = false;
     public GameObject pauseMenuPanel;
+    private ScoreManager scoreManager;
 
-    // Update is called once per frame
+    void Start()
+    {
+        scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();
+    }
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
@@ -25,7 +29,7 @@ public class PauseMenu : MonoBehaviour
     public void ResumeGame()
     {
         pauseMenuPanel.SetActive(false);
-        GameObject.Find("AudioBox").GetComponent<AudioBox>().AudioPlay(GameObject.Find("AudioBox").GetComponent<AudioBox>().clik);
+        FindObjectOfType<AudioManager>().PlayMusic("ClikMenu");
         Time.timeScale = 1f;
         isGamePaused = false;
     }
@@ -33,7 +37,7 @@ public class PauseMenu : MonoBehaviour
     public void PauseGame()
     {
         pauseMenuPanel.SetActive(true);
-        GameObject.Find("AudioBox").GetComponent<AudioBox>().AudioPlay(GameObject.Find("AudioBox").GetComponent<AudioBox>().clik);
+        FindObjectOfType<AudioManager>().PlayMusic("ClikMenu");
         Time.timeScale = 0f;
         isGamePaused = true;
     }
@@ -41,19 +45,21 @@ public class PauseMenu : MonoBehaviour
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
+        FindObjectOfType<AudioManager>().PlayMusic("ClikMenu");
+        scoreManager.ResertScore();
     }
 
     public void LoadMenu()
     {
         Debug.Log("Load");
-        GameObject.Find("AudioBox").GetComponent<AudioBox>().AudioPlay(GameObject.Find("AudioBox").GetComponent<AudioBox>().clik);
+        FindObjectOfType<AudioManager>().PlayMusic("ClikMenu");
         Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
     }
 
     public void QuitGame()
     {
-        GameObject.Find("AudioBox").GetComponent<AudioBox>().AudioPlay(GameObject.Find("AudioBox").GetComponent<AudioBox>().clik);
+        FindObjectOfType<AudioManager>().PlayMusic("ClikMenu");
         Debug.Log("Quit");
         Application.Quit();
     }

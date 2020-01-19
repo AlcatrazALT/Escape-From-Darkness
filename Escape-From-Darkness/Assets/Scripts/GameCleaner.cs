@@ -11,7 +11,7 @@ public class GameCleaner : MonoBehaviour
         {
             PlayerHealth playerFell = otherCollider.GetComponent<PlayerHealth>();
             playerFell.MakePlayerDead();
-            //gameOverPanel.SetActive(true);
+            gameOverPanel.SetActive(true);
         }
         else
         {

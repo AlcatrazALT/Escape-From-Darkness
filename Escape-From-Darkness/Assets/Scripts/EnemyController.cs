@@ -3,31 +3,26 @@
 public class EnemyController : MonoBehaviour
 {
     public float enemyMaxSpeed;
-    
     Animator enemyAnimator;
 
-    //facing
     public GameObject enemyGraphic;
     bool isEnemyCanFlip = true;
     bool isEnemyFacingRight = false;
     float enemyFlipTime = 5f;
     float enemyNextFlipChance = 0f;
 
-    //attacking
+
     public float enemyChargeTime;
     float startChargeTime;
     bool isEnemyCharging;
     Rigidbody2D enemyRB2D;
 
-    
-    // Start is called before the first frame update
     void Start()
     {
         enemyAnimator = GetComponentInChildren<Animator>();
         enemyRB2D = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(Time.time > enemyNextFlipChance)

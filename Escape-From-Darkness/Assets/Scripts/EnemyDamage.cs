@@ -8,16 +8,9 @@ public class EnemyDamage : MonoBehaviour
 
     float nextDamage;
     
-    // Start is called before the first frame update
     void Start()
     {
         nextDamage = 0f;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void OnTriggerStay2D(Collider2D otherCollider)

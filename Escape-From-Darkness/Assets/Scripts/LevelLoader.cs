@@ -1,41 +1,55 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelLoader : MonoBehaviour
 {
-    bool isPlayerInZone;
+    public int levelToLoad;
+    public GameObject teleportPanel;
+    private ScoreManager scoreManager;
 
-    public string levelToLoad;
-    
-    // Start is called before the first frame update
     void Start()
     {
-        isPlayerInZone = false;
+        scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();
     }
 
-    // Update is called once per frame
-    [System.Obsolete]
-    void Update()
+    void OnTriggerEnter2D(Collider2D otherCollider)
     {
-        if(Input.GetKeyDown(KeyCode.W) && isPlayerInZone)
+        if (otherCollider.tag == "Player")
         {
-            Application.LoadLevel(levelToLoad);
-            GameObject.Find("AudioBox").GetComponent<AudioBox>().AudioPlay(GameObject.Find("AudioBox").GetComponent<AudioBox>().levelLoader);
+            SaveScore();
+            teleportPanel.SetActive(true);
         }
     }
 
-    void OnTriggerEnter2D(Collider2D otherCollision)
+    void OnTriggerStay2D(Collider2D otherCollider)
     {
-        if(otherCollision.tag == "Player")
+        if (otherCollider.tag == "Player")
         {
-            isPlayerInZone = true;
+            if(Input.GetKeyDown("w"))
+            {
+                SaveScore();
+                Teleporting();
+            }
         }
     }
 
-    void OnTriggerExit2D(Collider2D otherCollision)
+    void Teleporting()
     {
-        if (otherCollision.tag == "Player")
+        FindObjectOfType<AudioManager>().PlayMusic("Teleport");
+        SceneManager.LoadScene(levelToLoad);
+    }
+
+    void OnTriggerExit2D(Collider2D otherCollider)
+    {
+        if (otherCollider.tag == "Player")
         {
-            isPlayerInZone = false;
+            teleportPanel.SetActive(false);
         }
+    }
+
+    void SaveScore()
+    {
+        PlayerPrefs.SetInt("Score", scoreManager.playerScore);
     }
 }

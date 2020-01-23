@@ -70,6 +70,7 @@ public class PlayerHealth : MonoBehaviour
     {
         Instantiate(playerDeathFX, transform.position, transform.rotation);
         FindObjectOfType<AudioManager>().PlayMusic("DeathSound");
-        Destroy(gameObject);   
+        Destroy(gameObject);
+        gameOverPanel.SetActive(true);
     }
 }

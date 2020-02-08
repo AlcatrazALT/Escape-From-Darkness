@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     float fireRate = 0.5f;
     float nextFire = 0f;
 
-    private ScoreManager scoreManager;
+    ScoreManager scoreManager;
 
     void Start()
     {
@@ -68,7 +68,6 @@ public class PlayerController : MonoBehaviour
         FindObjectOfType<AudioManager>().PlayMusic("PlayerJump");
         playerRb2D.AddForce(new Vector2(0, playerJumpHeight));
     }
-
     void PlayerFlip()
     {
         isPlayerFacingRight = !isPlayerFacingRight;
@@ -76,7 +75,6 @@ public class PlayerController : MonoBehaviour
         thescale.x *= -1;
         transform.localScale = thescale;
     }
-
     void PlayerShootBullet()
     {
         if(Time.time > nextFire)
@@ -94,7 +92,6 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-
    void OnTriggerEnter2D(Collider2D otherCollider)
     {
         if(otherCollider.tag == "Score")

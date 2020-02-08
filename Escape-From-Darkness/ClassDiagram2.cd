@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EnemyController" Collapsed="true">
+    <Position X="2.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQCBACAACBABQACCAAAAAAEAEAAgAQAAAAACAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\EnemyController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyDamage" Collapsed="true">
+    <Position X="9.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MAAAAAAgASBAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\EnemyDamage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyHealth" Collapsed="true">
+    <Position X="4" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAACAAAAAAAQiUAAAAAAAAAAAAAAAQAAAAEAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\EnemyHealth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DestroyMe" Collapsed="true">
+    <Position X="7.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\GameManager\DestroyMe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameCleaner" Collapsed="true">
+    <Position X="7.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameManager\GameCleaner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthPickUp" Collapsed="true">
+    <Position X="9.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameManager\HealthPickUp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LevelLoader" Collapsed="true">
+    <Position X="2.25" Y="8.25" Width="1.5" />
+    <AssociationLine Name="scoreManager" Type="ScoreManager" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.893" Y="8.941" />
+        <Point X="2.893" Y="9.937" />
+        <Point X="5.75" Y="9.937" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAACIACBAAAAAAAAAAAAAAEAAAAAAAAQAIAAAwAA=</HashCode>
+      <FileName>Assets\Scripts\GameManager\LevelLoader.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="scoreManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ScoreManager" Collapsed="true">
+    <Position X="5.75" Y="9.25" Width="1.5" />
+    <InheritanceLine Type="UnityEngine.MonoBehaviour" FixedToPoint="true">
+      <Path>
+        <Point X="7.5" Y="5.441" />
+        <Point X="7.5" Y="9.625" />
+        <Point X="7.25" Y="9.625" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAQCAAAAAAAAIIABAAgABAAQEAgAAAgA=</HashCode>
+      <FileName>Assets\Scripts\GameManager\ScoreManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BulletController" Collapsed="true">
+    <Position X="0.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAACAAAAAAUA=</HashCode>
+      <FileName>Assets\Scripts\Player\BulletController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BulletHit" Collapsed="true">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <AssociationLine Name="bulletBC" Type="BulletController" ManuallyRouted="true">
+      <Path>
+        <Point X="1.25" Y="6.941" />
+        <Point X="1.25" Y="7.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.075" Y="0.055" Height="0.182" Width="0.825" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AACAIAAAACBAAAAAAAAAAAAACEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\BulletHit.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="bulletBC" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PlayerController" Collapsed="true">
+    <Position X="4" Y="8.25" Width="1.5" />
+    <AssociationLine Name="scoreManager" Type="ScoreManager" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.312" Y="8.941" />
+        <Point X="4.312" Y="9.5" />
+        <Point X="5.75" Y="9.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>gAYAEAAAEiIAAAAAAAAgAAAAAFAAMAAAARAAAAIBQAQ=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="scoreManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PlayerHealth" Collapsed="true">
+    <Position X="5.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIBAACACIAggABBAAAAAgAAAAAAAAAgYAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerHealth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AudioManager" Collapsed="true">
+    <Position X="9.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEACAAAAAAAAAAAAEAAABAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Sound\AudioManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="soundArr" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sound" Collapsed="true">
+    <Position X="9.75" Y="9.5" Width="1.5" />
+    <AssociationLine Name="audioSource" Type="UnityEngine.AudioSource">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.128" Y="0.059" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAEEAgAAAAAAACAAA=</HashCode>
+      <FileName>Assets\Scripts\Sound\Sound.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="audioSource" />
+      <Field Name="clip" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="EndGameMenu" Collapsed="true">
+    <Position X="7.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAEAAAAAAMAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UIManager\EndGameMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameOverMenu" Collapsed="true">
+    <Position X="5.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAABACAAICAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UIManager\GameOverMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainMenu" Collapsed="true">
+    <Position X="5.75" Y="8.25" Width="1.5" />
+    <AssociationLine Name="scoreManager" Type="ScoreManager" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="6" Y="8.941" />
+        <Point X="6" Y="9.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-1.288" Y="0.069" Height="0.182" Width="1.233" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>BAIEAAAAACAAAgEAAAAAEAAAAAAMAAABAAAEAAAAQAA=</HashCode>
+      <FileName>Assets\Scripts\UIManager\MainMenu.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="scoreManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PauseMenu" Collapsed="true">
+    <Position X="0.5" Y="8.25" Width="1.5" />
+    <AssociationLine Name="scoreManager" Type="ScoreManager" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.438" Y="8.941" />
+        <Point X="1.438" Y="10.316" />
+        <Point X="6.062" Y="10.316" />
+        <Point X="6.062" Y="9.941" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.326" Y="0.126" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAAkAACAAAAAAAACAEIAAAAAAAAAgAAAAAAAAQAA=</HashCode>
+      <FileName>Assets\Scripts\UIManager\PauseMenu.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="scoreManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PlayerNameText" Collapsed="true">
+    <Position X="4" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UIManager\PlayerNameText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerProfile" Collapsed="true">
+    <Position X="2.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UIManager\PlayerProfile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.MonoBehaviour" Collapsed="true">
+    <Position X="6.25" Y="4.75" Width="2.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="UnityEngine.AudioSource" Collapsed="true">
+    <Position X="10.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="UnityEngine.AudioClip" Collapsed="true">
+    <Position X="8.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

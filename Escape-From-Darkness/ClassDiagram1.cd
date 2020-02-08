@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EnemyController">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BAQCBACAACBABQACCAAAAAAEAEAAgAQAAAAACAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\EnemyController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyDamage">
+    <Position X="0.5" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>MAAAAAAgASBAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\EnemyDamage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyHealth">
+    <Position X="14" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAACAAAAAAAQiUAAAAAAAAAAAAAAAQAAAAEAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\EnemyHealth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DestroyMe">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\GameManager\DestroyMe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameCleaner">
+    <Position X="2.75" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameManager\GameCleaner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthPickUp">
+    <Position X="2.75" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameManager\HealthPickUp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LevelLoader">
+    <Position X="2.75" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACIACBAAAAAAAAAAAAAAEAAAAAAAAQAIAAAwAA=</HashCode>
+      <FileName>Assets\Scripts\GameManager\LevelLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScoreManager">
+    <Position X="14" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAQCAAAAAAAAIIABAAgABAAQEAgAAAgA=</HashCode>
+      <FileName>Assets\Scripts\GameManager\ScoreManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BulletController">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAACAAAAAAUA=</HashCode>
+      <FileName>Assets\Scripts\Player\BulletController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BulletHit">
+    <Position X="4.5" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AACAIAAAACBAAAAAAAAAAAAACEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\BulletHit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerController">
+    <Position X="12" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>gAYAEAAAEiIAAAAAAAAgAAAAAFAAMAAAARAAAAIBQAQ=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerHealth">
+    <Position X="6.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQIBAACACIAggABBAAAAAgAAAAAAAAAgYAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerHealth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AudioManager">
+    <Position X="6.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEACAAAAAAAAAAAAEAAABAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Sound\AudioManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sound">
+    <Position X="4.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAEEAgAAAAAQACAAA=</HashCode>
+      <FileName>Assets\Scripts\Sound\Sound.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EndGameMenu">
+    <Position X="8.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAEAAAAAAMAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UIManager\EndGameMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameOverMenu">
+    <Position X="17.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAABACAAICAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UIManager\GameOverMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainMenu">
+    <Position X="8" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BAIEAAAAACAAAgEAAAAAEAAAAAAMAAABAAAEAAAAQAA=</HashCode>
+      <FileName>Assets\Scripts\UIManager\MainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PauseMenu">
+    <Position X="10.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAkAACAAAAAAAACAEIAAAAAAAAAgAAAAAAAAQAA=</HashCode>
+      <FileName>Assets\Scripts\UIManager\PauseMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerNameText">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UIManager\PlayerNameText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerProfile">
+    <Position X="10.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UIManager\PlayerProfile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

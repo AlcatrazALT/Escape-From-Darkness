@@ -43,7 +43,6 @@ public class ScoreManager : MonoBehaviour
         playerScore += scoreToAdd;
         UpdateHighScore();
         scoreText.text = playerScore.ToString();
-        //gameOverScoreText.text = playerScore.ToString();
         gameOverScoreText.text = scoreText.text;
     }
 

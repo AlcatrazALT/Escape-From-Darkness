@@ -2,7 +2,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
-
 public class AudioManager : MonoBehaviour
 {
     public Sound[] soundArr;
@@ -29,12 +28,10 @@ public class AudioManager : MonoBehaviour
             theSound.audioSource.loop = theSound.loop;
         }
     }
-
     void Start()
     {
         PlayMusic("GameBackGroundMusic");
     }
-
     public void PlayMusic(string nameSound)
     {
         Sound theSound = Array.Find(soundArr, sound => sound.nameSound == nameSound);

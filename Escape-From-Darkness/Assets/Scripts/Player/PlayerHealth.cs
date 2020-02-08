@@ -18,7 +18,6 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         playerCurrentHealth = playerMaxHealth;
-        PlayerController controlMovement = GetComponent<PlayerController>();
         playerHealthSlider.maxValue = playerCurrentHealth;
         playerHealthSlider.value = playerCurrentHealth;
         isPlayerTakeDamage = false;

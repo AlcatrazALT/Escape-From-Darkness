@@ -10,7 +10,6 @@ public class HealthPickUp : MonoBehaviour
         {
             PlayerHealth playerHealth = otherCollider.gameObject.GetComponent<PlayerHealth>();
             playerHealth.PlayerGetHealth(playerHealthAmount);
-
             Destroy(gameObject);
         }
     }
